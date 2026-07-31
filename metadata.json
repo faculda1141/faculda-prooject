@@ -1,0 +1,6 @@
+{
+  "name": "Faculda+",
+  "description": "Portal unificado para estudantes de Curitiba e região, facilitando o acesso a editais, instituições, calendário de prazos e orientação profissional com assistente de IA.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

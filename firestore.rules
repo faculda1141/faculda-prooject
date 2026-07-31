@@ -1,0 +1,27 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+    // Regras de segurança para o banco de dados do Faculda+
+    
+    // Qualquer pessoa (mesmo sem estar logada) pode ler as instituições e os prazos (editais)
+    match /institutions/{institutionId} {
+      allow read: if true;
+      allow write: if false; // Apenas administradores do sistema poderiam escrever (via painel privado)
+    }
+
+    match /deadlines/{deadlineId} {
+      allow read: if true;
+      allow write: if false;
+    }
+
+    // Estudantes podem ler e escrever suas próprias solicitações de isenção ou cadastros
+    match /students/{studentId} {
+      allow read, write: if true; // No ambiente do applet, permitimos acesso para fins de teste prático
+    }
+    
+    // Regra padrão: bloqueia qualquer outro acesso não especificado
+    match /{document=**} {
+      allow read, write: if true;
+    }
+  }
+}

@@ -1,0 +1,172 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+}
+
+/* Base modifications for highly corporate, technical, state government feel */
+body {
+  font-family: var(--font-sans);
+  background-color: #f4f6f9;
+  color: #1e293b;
+}
+
+/* Accessibility high-contrast / dark mode styles */
+.high-contrast {
+  background-color: #0f172a !important;
+  color: #f8fafc !important;
+}
+
+.high-contrast body {
+  background-color: #0f172a !important;
+  color: #f8fafc !important;
+}
+
+/* Force elements inside high-contrast to be readable */
+.high-contrast div,
+.high-contrast section,
+.high-contrast p,
+.high-contrast h1,
+.high-contrast h2,
+.high-contrast h3,
+.high-contrast h4,
+.high-contrast h5,
+.high-contrast h6,
+.high-contrast span,
+.high-contrast li,
+.high-contrast label {
+  color: #f8fafc !important;
+}
+
+/* Background overrides: no hard blue backgrounds that mask white text */
+.high-contrast .bg-white,
+.high-contrast .bg-slate-50,
+.high-contrast .bg-slate-100,
+.high-contrast .bg-slate-200,
+.high-contrast .bg-blue-50,
+.high-contrast .bg-emerald-50,
+.high-contrast .bg-amber-50,
+.high-contrast .bg-indigo-50,
+.high-contrast .bg-gray-50 {
+  background-color: #1e293b !important;
+  color: #ffffff !important;
+}
+
+/* Accent boxes and borders details */
+.high-contrast .border,
+.high-contrast .border-t,
+.high-contrast .border-b,
+.high-contrast .border-l,
+.high-contrast .border-r,
+.high-contrast .border-slate-200,
+.high-contrast .border-slate-100,
+.high-contrast .border-gray-200 {
+  border-color: #475569 !important;
+}
+
+/* Primary/Hero banners */
+.high-contrast .bg-[#002f6c],
+.high-contrast .bg-radial {
+  background: #1e293b !important;
+  border: 1px solid #475569 !important;
+}
+
+/* Active or secondary buttons */
+.high-contrast button {
+  background-color: #334155 !important;
+  color: #ffffff !important;
+  border: 1px solid #64748b !important;
+}
+
+.high-contrast button:hover {
+  background-color: #475569 !important;
+}
+
+/* High visibility for important action buttons and warnings */
+.high-contrast .bg-amber-400,
+.high-contrast button.bg-amber-400 {
+  background-color: #eab308 !important;
+  color: #000000 !important;
+  font-weight: bold !important;
+  border: 1px solid #fef08a !important;
+}
+
+.high-contrast .bg-slate-950,
+.high-contrast button.bg-slate-950 {
+  background-color: #f8fafc !important;
+  color: #020617 !important;
+  font-weight: bold !important;
+}
+
+/* Better styling for interactive links in dark mode */
+.high-contrast a,
+.high-contrast .text-[#002f6c] {
+  color: #38bdf8 !important; /* Light sky blue link color */
+  text-decoration: underline !important;
+}
+
+.high-contrast a:hover {
+  color: #7dd3fc !important;
+}
+
+/* Text overrides */
+.high-contrast .text-slate-900,
+.high-contrast .text-slate-800,
+.high-contrast .text-slate-750,
+.high-contrast .text-slate-700,
+.high-contrast .text-slate-600,
+.high-contrast .text-slate-500,
+.high-contrast .text-slate-450,
+.high-contrast .text-slate-400,
+.high-contrast .text-gray-900,
+.high-contrast .text-gray-700,
+.high-contrast .text-gray-600,
+.high-contrast .text-[#002f6c] {
+  color: #f1f5f9 !important;
+}
+
+/* Highlight and notice components */
+.high-contrast .border-l-4 {
+  border-left-width: 4px !important;
+  border-left-color: #eab308 !important;
+}
+
+.high-contrast .bg-amber-100 {
+  background-color: #451a03 !important;
+}
+
+.high-contrast .text-amber-800 {
+  color: #fef08a !important;
+}
+
+.high-contrast .text-slate-500 {
+  color: #cbd5e1 !important;
+}
+
+.high-contrast .text-emerald-400,
+.high-contrast .text-emerald-700,
+.high-contrast .text-emerald-800 {
+  color: #4ade80 !important;
+}
+
+.high-contrast .text-amber-300 {
+  color: #fde047 !important;
+}
+
+/* Scrollbar styling */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #f1f5f9;
+}
+::-webkit-scrollbar-thumb {
+  background: #002f6c;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #001a3c;
+}
